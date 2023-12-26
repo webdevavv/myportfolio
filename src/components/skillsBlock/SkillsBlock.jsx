@@ -36,7 +36,7 @@ function SkillsBlock() {
     },
   ];
   return (
-    <div className={styles.skillsBlock}>
+    <div className={styles.skillsBlock} id="skills">
       <div className={styles.titleWrapper}>
         <h2 className="title">Мои навыки</h2>
       </div>

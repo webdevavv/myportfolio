@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { NavLink } from "react-router-dom";
 
+const links = document.querySelectorAll(".link");
+
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", () => {
+    console.log("hello");
+  });
+}
+
 function Header() {
   const screenWidth = window.innerWidth;
   const [screenWidthIsMob, setScreenWidthIsMob] = useState(false);
@@ -67,10 +75,18 @@ function Header() {
           >
             <div className={styles.navWrapper}>
               <nav className="nav-mob">
-                <NavLink to="/">Обо мне</NavLink>
-                <a href="#">Навыки</a>
-                <NavLink to="/projects">Проекты</NavLink>
-                <a href="#">Контакты</a>
+                <NavLink to="/" className="link">
+                  Обо мне
+                </NavLink>
+                <a href="#skills" className="link">
+                  Навыки
+                </a>
+                <NavLink to="/projects" className="link">
+                  Проекты
+                </NavLink>
+                <a href="#contacts" className="link">
+                  Контакты
+                </a>
               </nav>
             </div>
           </div>
@@ -83,9 +99,9 @@ function Header() {
             </div>
             <nav className="nav-desc">
               <NavLink to="/">Обо мне</NavLink>
-              <a href="#">Навыки</a>
+              <a href="#skills">Навыки</a>
               <NavLink to="/projects">Проекты</NavLink>
-              <a href="#">Контакты</a>
+              <a href="#contacts">Контакты</a>
             </nav>
           </header>
         </div>
