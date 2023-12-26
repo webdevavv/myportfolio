@@ -1,0 +1,43 @@
+@import "../../vars";
+.topBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  margin: 80px 0;
+  .content {
+    .suptitle {
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      color: $ac-color;
+    }
+    .name {
+      color: #fff;
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .topBlock {
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    gap: 30px;
+    .content {
+      .suptitle {
+        font-size: 18px;
+      }
+      .name {
+        font-size: 34px;
+      }
+    }
+    .image {
+      max-width: 350px;
+    }
+  }
+}

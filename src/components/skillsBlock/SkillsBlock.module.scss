@@ -1,0 +1,40 @@
+.skillsBlock {
+  margin: 150px 0;
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: 70px;
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      .name {
+        text-align: center;
+      }
+      .image {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .skillsBlock {
+    .flex {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 25px;
+      row-gap: 40px;
+      .item {
+        font-size: 18px;
+      }
+    }
+  }
+}
